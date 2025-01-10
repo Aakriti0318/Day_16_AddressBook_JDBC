@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         CreateDatabase cd=new CreateDatabase();
+        CreateTable ct=new CreateTable();
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter any number of your choice from 1 to =");
         int n=sc.nextInt();
@@ -13,7 +14,9 @@ public class Main {
             case 1:
                 cd.createdb();
                 break;
-
+            case 2:
+                ct.createtable();
+                break;
         }
     }
 }
