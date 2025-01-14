@@ -6,6 +6,7 @@ public class Main {
         CreateDatabase cd=new CreateDatabase();
         CreateTable ct=new CreateTable();
         Contact con=new Contact();
+        EditContact ed=new EditContact();
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter any number of your choice from 1 to =");
         int n=sc.nextInt();
@@ -22,7 +23,10 @@ public class Main {
             case 3:
                 con.contact();
                 break;
-
+            //UC4 Editing Contact
+            case 4:
+                ed.edit();
+                break;
     }
     }
 }
