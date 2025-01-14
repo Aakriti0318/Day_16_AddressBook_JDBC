@@ -7,6 +7,7 @@ public class Main {
         CreateTable ct=new CreateTable();
         Contact con=new Contact();
         EditContact ed=new EditContact();
+        DeleteContact del=new DeleteContact();
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter any number of your choice from 1 to =");
         int n=sc.nextInt();
@@ -26,6 +27,9 @@ public class Main {
             //UC4 Editing Contact
             case 4:
                 ed.edit();
+                break;
+            case 5:
+                del.delete();
                 break;
     }
     }
