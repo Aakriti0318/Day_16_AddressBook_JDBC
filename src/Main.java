@@ -13,6 +13,7 @@ public class Main {
         RetrieveSortedAlphabetically alpha=new RetrieveSortedAlphabetically();
         AddType_Name type=new AddType_Name();
         NoOfContactPersons number=new NoOfContactPersons();
+        AddPersonToMultipleTypes adding=new AddPersonToMultipleTypes();
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter any number of your choice from 1 to =");
         int n=sc.nextInt();
@@ -56,6 +57,10 @@ public class Main {
             //UC10 Ability to get number of contact persons
             case 10:
                 number.Count();
+                break;
+            //UC11 Ability to add person to both Friend and Family
+            case 11:
+                adding.add();
                 break;
     }
     }
