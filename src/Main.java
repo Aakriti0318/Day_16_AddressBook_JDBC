@@ -9,6 +9,7 @@ public class Main {
         EditContact ed=new EditContact();
         DeleteContact del=new DeleteContact();
         RetrieveByCityOrState ret=new RetrieveByCityOrState();
+        GetSizeByCityOrState get=new GetSizeByCityOrState();
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter any number of your choice from 1 to =");
         int n=sc.nextInt();
@@ -36,6 +37,10 @@ public class Main {
             //UC6 Retrieving the data by city and state
             case 6:
                 ret.retrieve();
+                break;
+            //UC7 Get Size By City or State
+            case 7:
+                get.getSize();
                 break;
     }
     }
