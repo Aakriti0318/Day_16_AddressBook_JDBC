@@ -2,18 +2,13 @@ import java.sql.*;
 public class NoOfContactPersons {
     public void Count(){
         try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/AddressBookDB", "root", "password")) {
-            String alterQuery = "ALTER TABLE Contacts ADD address_book_name VARCHAR(50), ADD type VARCHAR(50)";
-            Statement statement = connection.createStatement();
-            statement.executeUpdate(alterQuery);
+            String query = "SELECT type, COUNT(*) AS count FROM Contacts GROUP BY type";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
 
-            String updateQuery = "UPDATE Contacts SET address_book_name = ?, type = ? WHERE first_name = ?";
-            PreparedStatement preparedStatement = connection.prepareStatement(updateQuery);
-            preparedStatement.setString(1, "MyContacts");
-            preparedStatement.setString(2, "Friends");
-            preparedStatement.setString(3, "joe");
-            preparedStatement.executeUpdate();
-
-            System.out.println("Address book type added successfully.");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                System.out.println("Type: " + ((ResultSet) resultSet).getString("type") + ", Count: " + resultSet.getInt("count"));
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
