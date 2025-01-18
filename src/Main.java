@@ -11,6 +11,7 @@ public class Main {
         RetrieveByCityOrState ret=new RetrieveByCityOrState();
         GetSizeByCityOrState get=new GetSizeByCityOrState();
         RetrieveSortedAlphabetically alpha=new RetrieveSortedAlphabetically();
+        AddType_Name type=new AddType_Name();
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter any number of your choice from 1 to =");
         int n=sc.nextInt();
@@ -46,6 +47,10 @@ public class Main {
             //UC8 Retrieve sorted Alphabetically
             case 8:
                 alpha.sortAlphabet();
+                break;
+            //UC9 Adding Name and type in address Book
+            case 9:
+                type.add();
                 break;
     }
     }
