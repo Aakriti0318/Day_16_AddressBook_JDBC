@@ -8,6 +8,7 @@ public class Main {
         Contact con=new Contact();
         EditContact ed=new EditContact();
         DeleteContact del=new DeleteContact();
+        RetrieveByCityOrState ret=new RetrieveByCityOrState();
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter any number of your choice from 1 to =");
         int n=sc.nextInt();
@@ -28,8 +29,13 @@ public class Main {
             case 4:
                 ed.edit();
                 break;
+            //UC5 Delete
             case 5:
                 del.delete();
+                break;
+            //UC6 Retrieving the data by city and state
+            case 6:
+                ret.retrieve();
                 break;
     }
     }
