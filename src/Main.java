@@ -12,6 +12,7 @@ public class Main {
         GetSizeByCityOrState get=new GetSizeByCityOrState();
         RetrieveSortedAlphabetically alpha=new RetrieveSortedAlphabetically();
         AddType_Name type=new AddType_Name();
+        NoOfContactPersons number=new NoOfContactPersons();
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter any number of your choice from 1 to =");
         int n=sc.nextInt();
@@ -51,6 +52,10 @@ public class Main {
             //UC9 Adding Name and type in address Book
             case 9:
                 type.add();
+                break;
+            //UC10 Ability to get number of contact persons
+            case 10:
+                number.Count();
                 break;
     }
     }
